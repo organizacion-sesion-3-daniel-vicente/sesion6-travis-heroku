@@ -32,6 +32,28 @@ INSERT INTO `movies` (`name`, `description`, `director`, `embedUrl`, `datePublis
 ('Los Vengadores', 'The Avengers (The Avengers: Los Vengadores en Latinoamérica y Los Vengadores en España) es una película de superhéroes estadounidense producida por Marvel Studios y distribuida por Walt Disney Pictures, basado en el equipo de superhéroes de Marvel Comics del mismo nombre. Es parte del Universo Cinematográfico de Marvel, que enlaza varias películas de superhéroes de Marvel como Iron Man (2008), El Increíble Hulk (2008), Iron Man 2 (2010), Thor (2011) y Capitán América: el primer vengador (2011).', 'Joss Whedon', 'https://www.youtube.com/embed/HQIiYqOVTWo', '2012-04-25'),
 ('Alta Fidelidad', 'Rob Gordon (John Cusack) es el propietario de una tienda de discos de Chicago a punto de quebrar y en la que sólo se venden discos de vinilo. Rob comparte su afición por el clásico material con sus dos empleados, Dick (Todd Louiso) y Barry (Jack Black). En la tienda, los tres reflexionan y discuten sobre la música que aman. Pero Rob tiene otro problema: quiere volver con su antigua novia Laura (Iben Hjejle), que está saliendo con otro chico.', 'Stephen Frears', 'https://www.youtube.com/embed/cxFFRhNovbo', '2000-05-19');
 
+--
+-- Estructura de tabla para la tabla `series`
+--
+
+CREATE TABLE IF NOT EXISTS `series` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `description` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `director` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `embedUrl` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `datePublished` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `series`
+--
+
+INSERT INTO `series` (`name`, `description`, `director`, `embedUrl`, `datePublished`) VALUES
+('La casa de papel', 'Un misterioso personaje, que se hace llamar "El Profesor", planea el mayor de los atracos jamás ideado. Para llevar a cabo el ambicioso plan, recluta a una banda formada por personas con ciertas cualidades y algo en común: no tienen nada que perder. El objetivo es atracar la Fábrica Nacional de Moneda y Timbre, con la intención de quedarse encerrados dentro con una misión muy concreta: no robar dinero, sino crearlo. Tras cinco meses de reclusión, memorizando cada paso, cada detalle, cada probabilidad..., por fin llega el día. Les esperan once días de encierro en la Fábrica de Moneda, rodeados de los cuerpos de élite de la policía y con 67 rehenes en su poder.', 'Álex Pina', 'https://www.youtube.com/embed/To_kVMMu-Ls', '2017-01-19'),
+('Breaking Bad', 'Tras cumplir 50 años, Walter White (Bryan Cranston), un profesor de química de un instituto de Albuquerque, Nuevo México, se entera de que tiene un cáncer de pulmón incurable. Casado con Skyler (Anna Gunn) y con un hijo discapacitado (RJ Mitte), la brutal noticia lo impulsa a dar un drástico cambio a su vida: decide, con la ayuda de un antiguo alumno (Aaron Paul), fabricar anfetaminas y ponerlas a la venta. Lo que pretende es liberar a su familia de problemas económicos cuando se produzca el fatal desenlace.', 'Vince Gilligan', 'https://www.youtube.com/embed/Oxo5ij2cJjs', '2008-04-25'),
+('Lost', 'Historia de un variopinto grupo de supervivientes de un accidente de aviación en una isla del Pacífico aparentemente desierta, una isla en la que suceden cosas muy extrañas. Luchando por la supervivencia, casi medio centenar de personas mostrarán lo mejor y lo peor de sí mismas.', 'J.J. Abrams', 'https://www.youtube.com/embed/KTu8iDynwNc', '2004-05-19');
 
 --
 -- Estructura de tabla para la tabla `musicalbums`
@@ -105,4 +127,3 @@ INSERT INTO `videogames` (`name`, `description`, `gamePlatform`, `applicationSub
 ('Warlords of Draenor', 'World of Warcraft: Warlods of Draenor es un videojuego de la saga Warcraft. Es la quinta expansión del videojuego de World of Warcraft. Está desarrollado y distribuido por Blizzard Entertainment. La expansión aumentará el nivel máximo actual de 90 a 100 e introduce un nuevo sistema de "Ciudadelas" con niveles de actualización. En sus primeras 24 horas, ya había vendido más de 3.3 millones de copias, llevando la base global de suscriptores del juego más allá de la marca de los 10 millones.', 'PC', 'Rol multijugador masivo en línea', 'http://img2.wikia.nocookie.net/__cb20131108233344/wowwiki/images/b/b7/WarlordsofDraenorLogo_Shadow.png', 'https://www.youtube.com/embed/NVE2FxMWxeg', '2014-11-13'),
 ('Assassin''s Creed: Unity', 'Assassin''s Creed: Unity es un videojuego de ficción histórica desarrollado por Ubisoft. Es la séptima entrega de la saga Assassin''s Creed y su temática gira en torno a la Revolución Francesa, en el siglo XVIII. El juego fue lanzado en Norteamérica el 11 de noviembre del 2014 y en Europa el 13 de noviembre de 2014.', 'PS4', 'Acción-aventura(parkour) y sigilo', 'https://drh1.img.digitalriver.com/DRHM/Storefront/Company/ubi/images/hero/ubi/ACU_hero.jpg', 'https://www.youtube.com/embed/NVE2FxMWxeg', '2014-11-13'),
 ('League of Legends', 'League of Legends, también conocido por sus siglas LoL, es un videojuego de género multiplayer online battle arena (MOBA). El juego está inspirado en el popular mapa personalizado del Warcraft III, Defense of the Ancients: Allstars (abreviado normalmente con las siglas DotA) diseñado por Steve «Guinsoo» Feak y Steve «Pendragon» Mescon.', 'PC', 'Campo De Batalla Multijugador En Línea', 'http://www.funandseriousgamefestival.com/imagenes/league-of-legends-g.jpg', 'https://www.youtube.com/embed/ZqilPmPw2yc', '2009-10-27');
-
